@@ -5,12 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+android:background="@drawable/lindas_hojas_sw17nsa25bu0sh1k"
     tools:context=".MainActivity">
+
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:shadowColor="@color/verde"
+        android:shadowRadius="@android:integer/config_longAnimTime"
         android:text="Formulario de reserva"
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,6 +69,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <RadioButton
+            android:id="@+id/radioCongreso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Congreso" />
+
+        <RadioButton
             android:id="@+id/radioButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -76,23 +86,18 @@
             android:layout_height="wrap_content"
             android:text="Jornada" />
 
-        <RadioButton
-            android:id="@+id/radioCongreso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Congreso" />
     </RadioGroup>
 
     <EditText
         android:id="@+id/editTextNumber"
         android:layout_width="52dp"
         android:layout_height="45dp"
-        android:layout_marginTop="268dp"
+        android:layout_marginTop="164dp"
         android:ems="10"
         android:enabled="false"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.887"
+        app:layout_constraintHorizontal_bias="0.943"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
@@ -100,10 +105,10 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="116dp"
         android:text="Número de jornadas"
         app:layout_constraintEnd_toEndOf="@+id/editText"
-        app:layout_constraintHorizontal_bias="0.771"
+        app:layout_constraintHorizontal_bias="0.935"
         app:layout_constraintStart_toStartOf="@+id/editText"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 
@@ -111,11 +116,11 @@
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="208dp"
         android:enabled="false"
         android:text="Se necesitan habitaciones"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.849"
+        app:layout_constraintHorizontal_bias="0.972"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
@@ -207,12 +212,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="172dp"
-        android:text="Cancelar"
         android:backgroundTint="@color/black"
+        android:text="Cancelar"
         app:layout_constraintEnd_toEndOf="@+id/editTextNumeroAsistentes"
         app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="@+id/editTextNumeroAsistentes"
         app:layout_constraintTop_toBottomOf="@+id/editTextNumeroAsistentes" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="38dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/persona1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="38dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/editText"
+        app:srcCompat="@drawable/telefono" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
